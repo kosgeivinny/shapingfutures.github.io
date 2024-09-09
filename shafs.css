@@ -95,77 +95,95 @@ nav ul li a:hover {
 
 
 
-
 main {
-  padding: 2em 1em;
+  padding: 0; /* Remove padding to align sections properly */
 }
 
-section.page {
-  display: none; /* Hide all pages by default */
+/* Home section with video background */
+#home {
+  position: relative; /* Allows positioning of the hero content over the video */
+  height: 60vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow for video */
+  margin: 0;
 }
 
-section.page.active {
-  display: block; /* Show only the active page */
-}
-
+/* Video background styling */
 video#bg-video {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Ensure video stays behind content */
+  z-index: 0; /* Positioned behind the hero content */
 }
 
+/* Hero content styling */
 .hero-content {
   position: relative;
   text-align: center;
   color: #fff;
-  padding: 5em 1em;
+  z-index: 1; /* Positioned above the video */
+  padding: 8em 1em; /* Space around the hero content */
 }
 
+/* Hero content heading styling */
 .hero-content h2 {
   margin: 0;
   font-size: 2.5em;
   line-height: 1.2;
 }
 
-.hero-content button {
-  padding: 0.5em 1.5em;
+/* Hero content button styling */
+.hero-button {
+  display: inline-block;
+  padding: 0.75em 2em;
   font-size: 1em;
   border: none;
   background-color: #f39c12; /* Yellow button */
   color: #fff;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 12px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  text-decoration: none;
 }
 
-.hero-content button:hover {
+.hero-button:hover {
   background-color: #e67e22; /* Darker yellow on hover */
+  color: #ffffff;
+  transform: scale(1.10);
+}
+.hero-button:focus {
+  outline: 2px solid #f39c12;
+  outline-offset: 4px;
 }
 
+/* Sponsors section styling */
 #sponsors {
-  position: relative; /* Position relative for the overlay */
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  padding: 2em 0;
+  padding: 0 1em 1em 1em; /* Space around the content */
   text-align: center;
-  border-radius: 12px; /* Rounded corners for the section */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1; /* Positioned below the hero content but above the footer */
+  margin-top: 0; /* Remove margin-top to follow directly after the hero section */
 }
 
+/* Overlay for the sponsors section */
 #sponsors::before {
-  content: ''; /* Pseudo-element for overlay */
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.6); /* Light overlay for better contrast */
-  z-index: -1; /* Place behind the content */
-  border-radius: 12px; /* Match border radius of the section */
+  background: rgba(255, 255, 255, 0.6); /* Light overlay for contrast */
+  z-index: -1; /* Positioned behind the content */
+  border-radius: 12px; /* Match border radius */
 }
 
+/* Sponsor container styling */
 .sponsor-container {
   display: flex;
   justify-content: center;
@@ -173,13 +191,14 @@ video#bg-video {
   gap: 2em;
 }
 
+/* Sponsor image styling */
 .sponsor-container img {
-  width: 150px; /* Fixed size for uniformity */
+  width: 150px;
   height: 150px;
-  object-fit: cover; /* Ensures images cover the space */
-  border-radius: 12px; /* Rounded corners for a modern look */
-  border: 3px solid #f39c12; /* Orange border to make logos pop */
-  background-color: #ffffff; /* White background for images with transparency */
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #f39c12;
+  background-color: #ffffff;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -195,7 +214,7 @@ video#bg-video {
   }
 
   .sponsor-container img {
-    width: 120px; /* Adjust size for smaller screens */
+    width: 120px;
     height: 120px;
   }
 }
