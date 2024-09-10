@@ -48,6 +48,9 @@ nav ul li a:hover {
   text-decoration: underline; /* Underline on hover */
   color: #f39c12; /* Bright orange on hover */
 }
+nav ul li a.active {
+  color: #f39c12; 
+}
 
 /* Social Media Icons Styling */
 .social-media {
