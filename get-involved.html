@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shaping Futures empowers youth through dance and community support.">
   <title>Shaping Futures</title>
   <link rel="stylesheet" href="shafs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="shafs.js" defer></script>
 </head>
 <body>
-  <header>
+  <header role="banner">
     <div class="logo">
-    <a href="index.html"><img src="images/logo.jpg" alt="Shaping Futures Logo"></a>
+      <a href="index.html"><img src="images/logo.jpg" alt="Shaping Futures Logo"></a>
     </div>
-    <nav>
+    <nav aria-label="Main Navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -23,12 +24,25 @@
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
-    <div class="social-media">
-      <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/@yourprofile" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-      <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://youtube.com/c/yourchannel" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <div class="social-media" aria-label="Social Media Links">
+      <a href="https://whatsapp.com/yourprofile" target="_blank" style="--accent-color: green" aria-label="Whatsapp" rel="noopener noreferrer">
+        <img src="logo/whatsapp.svg" alt="Whatsapp Logo" class="social-icon">
+      </a>
+      <a href="https://x.com/yourprofile" class="twitter" target="_blank" style="--accent-color: black" aria-label="Twitter" rel="noopener noreferrer">
+        <img src="logo/x.svg" alt="X Logo" class="social-icon">
+      </a>
+      <a href="https://instagram.com/yourprofile" style="--accent-color: #fe107c" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+        <img src="logo/instagram.svg" alt="Instagram Logo" class="social-icon">
+      </a>
+      <a href="https://tiktok.com/@yourprofile" target="_blank" style="--accent-color: #38142a" aria-label="TikTok" rel="noopener noreferrer">
+        <img src="logo/tiktok.svg" alt="TikTok Logo" class="social-icon">
+      </a>
+      <a href="https://facebook.com/yourprofile" target="_blank" style="--accent-color: #106bff" aria-label="Facebook" rel="noopener noreferrer">
+        <img src="logo/facebook.svg" alt="Facebook Logo" class="social-icon">
+      </a>
+      <a href="https://youtube.com/c/yourchannel" target="_blank" style="--accent-color: red" aria-label="YouTube" rel="noopener noreferrer">
+        <img src="logo/youtube.svg" alt="YouTube Logo" class="social-icon">
+      </a>
     </div>
   </header>
 
@@ -56,22 +70,42 @@
         <p>Participate in our events and see firsthand the positive impact we’re making in the community. Join us for workshops, fundraisers, and more!</p>
         <a href="#" class="cta-button">View Upcoming Events</a>
       </div>
+
+      
     </div>
+    <h2>Our Sponsors</h2>
+        <div class="sponsor-container">
+          <img src="images/gal1.jpg" alt="Sponsor 1 Logo" loading="lazy">
+          <img src="images/gal2.jpg" alt="Sponsor 2 Logo" loading="lazy">
+          <img src="images/gal3.jpg" alt="Sponsor 3 Logo" loading="lazy">
+          <img src="images/gal4.jpg" alt="Sponsor 4 Logo" loading="lazy">
+        </div>
   </div>
 </section>
 </main>
 
-<footer>
-   
-   <p>Follow us on:
-      <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/@yourprofile" target="_blank" aria-label="TikTok" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
-      <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://youtube.com/c/yourchannel" target="_blank" aria-label="YouTube" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-   </p>
-   
-   <p>&copy; 2024 Shaping Futures. All rights reserved.</p>
+<footer role="contentinfo">
+  <p>Follow us on:
+    <a href="https://whatsapp.com/yourprofile" target="_blank" style="--accent-color: green" aria-label="Whatsapp" rel="noopener noreferrer">
+      <img src="logo/whatsapp.svg" alt="Whatsapp Logo" class="social-icon">
+    </a>
+    <a href="https://x.com/yourprofile" class="twitter" target="_blank" style="--accent-color: white" aria-label="Twitter" rel="noopener noreferrer">
+      <img src="logo/x.svg" alt="X Logo" class="social-icon">
+    </a>
+    <a href="https://instagram.com/yourprofile" style="--accent-color: #fe107c" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+      <img src="logo/instagram.svg" alt="Instagram Logo" class="social-icon">
+    </a>
+    <a href="https://tiktok.com/@yourprofile" target="_blank" style="--accent-color: #38142a" aria-label="TikTok" rel="noopener noreferrer">
+      <img src="logo/tiktok.svg" alt="TikTok Logo" class="social-icon">
+    </a>
+    <a href="https://facebook.com/yourprofile" target="_blank" style="--accent-color: #106bff" aria-label="Facebook" rel="noopener noreferrer">
+      <img src="logo/facebook.svg" alt="Facebook Logo" class="social-icon">
+    </a>
+    <a href="https://youtube.com/c/yourchannel" target="_blank" style="--accent-color: red" aria-label="YouTube" rel="noopener noreferrer">
+      <img src="logo/youtube.svg" alt="YouTube Logo" class="social-icon">
+    </a>
+  </p>
+  <p>&copy; 2024 Shaping Futures. All rights reserved.</p>
 </footer>
   </body>
 </html>

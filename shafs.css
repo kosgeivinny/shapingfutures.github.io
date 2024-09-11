@@ -17,6 +17,7 @@ header {
   color: #fff; /* White text color */
   position: relative;
   z-index: 1; /* Ensure header stays on top */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 /* Logo Styling */
@@ -48,6 +49,11 @@ nav ul li a:hover {
   text-decoration: underline; /* Underline on hover */
   color: #f39c12; /* Bright orange on hover */
 }
+nav ul li a:focus {
+  outline: 2px solid #f39c12; /* Orange outline on focus */
+  outline-offset: 2px; /* Offset to prevent overlap with text */
+  text-decoration: none;
+}
 nav ul li a.active {
   color: #f39c12; 
 }
@@ -60,12 +66,65 @@ nav ul li a.active {
 
 .social-media a {
   margin-left: 1em; /* Space between icons */
-  color: inherit; /* Use inherited color for icons */
-  font-size: 24px; /* Size of icons */
+  font-size: 20px; /* Size of icons */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition */
+  border-radius: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  box-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.05);
 }
 
+.social-media a::before {
+  content: attr(aria-label);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(45px) translateX(-100px) rotate(30deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(.42,0,.44,1.68);
+} 
 .social-media a:hover {
-  color: #f39c12; /* Bright orange on hover */
+  background-color: var(--accent-color);
+  fill: white;
+}
+.social-media .twitter:hover {
+  background-color: white;
+}
+.social-media a:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(25px) translateX(-50px) rotate(-25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+.social-media a:hover::before {
+ transform: translateY(48px) translateX(-75px);
+ opacity: 1;
+}
+.social-media a:hover::after {
+  transform: translateY(43px) translateX(-28px) rotate(-50deg);
+  opacity: 1;
+ }
+.social-icon {
+  width: 24px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: middle; /* Align with text */
+  transition: transform 0.3s; /* Smooth scale effect */
+  
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
 }
 
 /* Responsive Design */
@@ -105,7 +164,7 @@ main {
 /* Home section with video background */
 #home {
   position: relative; /* Allows positioning of the hero content over the video */
-  height: 60vh; /* Full viewport height */
+  height: 75vh; /* Full viewport height */
   overflow: hidden; /* Hide overflow for video */
   margin: 0;
 }
@@ -127,7 +186,7 @@ video#bg-video {
   text-align: center;
   color: #fff;
   z-index: 1; /* Positioned above the video */
-  padding: 8em 1em; /* Space around the hero content */
+  padding: 10em 20em; /* Space around the hero content */
 }
 
 /* Hero content heading styling */
@@ -135,56 +194,23 @@ video#bg-video {
   margin: 0;
   font-size: 2.5em;
   line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Dark shadow for contrast */
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 5em 1em; /* Reduced padding for smaller screens */
+  }
+
+  .hero-content h2 {
+    font-size: 1.8em; /* Smaller font size on smaller screens */
+  }
 }
 
 /* Hero content button styling */
-.hero-button {
-  display: inline-block;
-  padding: 0.75em 2em;
-  font-size: 1em;
-  border: none;
-  background-color: #f39c12; /* Yellow button */
-  color: #fff;
-  cursor: pointer;
-  border-radius: 12px;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  text-decoration: none;
-}
 
-.hero-button:hover {
-  background-color: #e67e22; /* Darker yellow on hover */
-  color: #ffffff;
-  transform: scale(1.10);
-}
-.hero-button:focus {
-  outline: 2px solid #f39c12;
-  outline-offset: 4px;
-}
 
 /* Sponsors section styling */
-#sponsors {
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  padding: 0 1em 1em 1em; /* Space around the content */
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  position: relative;
-  z-index: 1; /* Positioned below the hero content but above the footer */
-  margin-top: 0; /* Remove margin-top to follow directly after the hero section */
-}
-
-/* Overlay for the sponsors section */
-#sponsors::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.6); /* Light overlay for contrast */
-  z-index: -1; /* Positioned behind the content */
-  border-radius: 12px; /* Match border radius */
-}
 
 /* Sponsor container styling */
 .sponsor-container {
@@ -286,25 +312,26 @@ footer p {
 }
 
 footer a {
-  color: #fff; /* White link color */
+  color: #fff; /* Default white link color */
   text-decoration: none; /* Remove underline */
   transition: color 0.3s; /* Smooth color transition */
   font-weight: lighter;
+  display: inline-block; /* Ensure proper spacing */
+  margin: 0 0.5em; /* Space between icons */
+  background-color: var(--accent-color);
+  border-radius: 100%;
+  padding: 5px;
 }
 
 footer a:hover {
-  color: #f39c12; /* Bright orange on hover */
+  color: var(--accent-color); /* Use accent color on hover */
   text-decoration: underline; /* Underline on hover */
 }
 
-footer i {
-  margin-left: 0.5em; /* Space between icons */
-  font-size: 20px; /* Size of icons */
-  transition: color 0.3s; /* Smooth color transition */
-}
-
-footer i:hover {
-  color: #f39c12; /* Bright orange on hover */
+.social-icon {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  vertical-align: middle; /* Align with text */
 }
 
 
