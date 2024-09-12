@@ -14,14 +14,14 @@
     <div class="logo">
       <a href="index.html"><img src="images/logo.jpg" alt="Shaping Futures Logo"></a>
     </div>
-    <nav aria-label="Main Navigation">
+    <nav role="navigation" aria-label="Main Navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="get-involved.html" class="active">Get Involved</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="programs.html"><i class="fas fa-calendar-alt"></i> Programs</a></li>
+        <li><a href="get-involved.html" class="active"><i class="fas fa-hands-helping"></i> Get Involved</a></li>
+        <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
       </ul>
     </nav>
     <div class="social-media" aria-label="Social Media Links">
@@ -46,67 +46,64 @@
     </div>
   </header>
 
-<main>
-<section id="get-involved">
-  <div class="get-involved-container">
-    <h2>Get Involved</h2>
-    <p>Join us in making a difference! There are many ways you can get involved with our organization and help us achieve our mission. Whether you want to volunteer your time, make a donation, or participate in our events, your support is invaluable.</p>
-    
-    <div class="get-involved-options">
-      <div class="option">
-        <h3>Volunteer with Us</h3>
-        <p>Our volunteers are the backbone of our organization. Help us by offering your time and skills to support our programs and initiatives. We welcome volunteers of all ages and backgrounds.</p>
-        <a href="#" class="cta-button">Sign Up to Volunteer</a>
-      </div>
-      
-      <div class="option">
-        <h3>Make a Donation</h3>
-        <p>Your generous donations enable us to continue our work and expand our reach. Support our programs and make a lasting impact in the lives of those we serve.</p>
-        <a href="#" class="cta-button">Donate Now</a>
-      </div>
-      
-      <div class="option">
-        <h3>Attend Our Events</h3>
-        <p>Participate in our events and see firsthand the positive impact we’re making in the community. Join us for workshops, fundraisers, and more!</p>
-        <a href="#" class="cta-button">View Upcoming Events</a>
-      </div>
-
-      
-    </div>
-    <h2>Our Sponsors</h2>
-        <div class="sponsor-container">
-          <img src="images/gal1.jpg" alt="Sponsor 1 Logo" loading="lazy">
-          <img src="images/gal2.jpg" alt="Sponsor 2 Logo" loading="lazy">
-          <img src="images/gal3.jpg" alt="Sponsor 3 Logo" loading="lazy">
-          <img src="images/gal4.jpg" alt="Sponsor 4 Logo" loading="lazy">
+  <main>
+    <section id="get-involved">
+      <div class="get-involved-container">
+        <h2>Get Involved</h2>
+        <p>Join us in making a difference! There are many ways you can get involved with our organization and help us achieve our mission. Whether you want to volunteer your time, make a donation, or participate in our events, your support is invaluable.</p>
+        
+        <div class="get-involved-options">
+          <div class="option">
+            <h3>Volunteer with Us</h3>
+            <p>Our volunteers are the backbone of our organization. Help us by offering your time and skills to support our programs and initiatives. We welcome volunteers of all ages and backgrounds.</p>
+            <a href="#" class="cta-button">Sign Up to Volunteer</a>
+          </div>
+          
+          <div class="option">
+            <h3>Make a Donation</h3>
+            <p>Your generous donations enable us to continue our work and expand our reach. Support our programs and make a lasting impact in the lives of those we serve.</p>
+            <a href="#" id="donate-btn" class="cta-button don">Donate Now</a>
+          </div>
+          
+          <div class="option">
+            <h3>Attend Our Events</h3>
+            <p>Participate in our events and see firsthand the positive impact we’re making in the community. Join us for workshops, fundraisers, and more!</p>
+            <a href="#" class="cta-button">View Upcoming Events</a>
+          </div>
         </div>
+        
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Structure -->
+  <div id="donation-modal" class="modal">
+    <div class="modal-content donation-modal-content">
+      <span class="close">&times;</span>
+      <h2>Donation Options</h2>
+      <div class="donation-options">
+        <div class="donation-option">
+          <h3>Monetary Donations</h3>
+          <p>You can make monetary donations using the following account numbers:</p>
+          <ul>
+            <li>Bank Name: Account Number</li>
+            <li>Bank Name: Account Number</li>
+          </ul>
+        </div>
+        <div class="donation-option">
+          <h3>Clothing Donations</h3>
+          <p>Drop off locations for clothing donations:</p>
+          <ul>
+            <li>Location 1: Contact Person, Phone Number</li>
+            <li>Location 2: Contact Person, Phone Number</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
-</main>
 
-<footer role="contentinfo">
-  <p>Follow us on:
-    <a href="https://whatsapp.com/yourprofile" target="_blank" style="--accent-color: green" aria-label="Whatsapp" rel="noopener noreferrer">
-      <img src="logo/whatsapp.svg" alt="Whatsapp Logo" class="social-icon">
-    </a>
-    <a href="https://x.com/yourprofile" class="twitter" target="_blank" style="--accent-color: white" aria-label="Twitter" rel="noopener noreferrer">
-      <img src="logo/x.svg" alt="X Logo" class="social-icon">
-    </a>
-    <a href="https://instagram.com/yourprofile" style="--accent-color: #fe107c" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
-      <img src="logo/instagram.svg" alt="Instagram Logo" class="social-icon">
-    </a>
-    <a href="https://tiktok.com/@yourprofile" target="_blank" style="--accent-color: #38142a" aria-label="TikTok" rel="noopener noreferrer">
-      <img src="logo/tiktok.svg" alt="TikTok Logo" class="social-icon">
-    </a>
-    <a href="https://facebook.com/yourprofile" target="_blank" style="--accent-color: #106bff" aria-label="Facebook" rel="noopener noreferrer">
-      <img src="logo/facebook.svg" alt="Facebook Logo" class="social-icon">
-    </a>
-    <a href="https://youtube.com/c/yourchannel" target="_blank" style="--accent-color: red" aria-label="YouTube" rel="noopener noreferrer">
-      <img src="logo/youtube.svg" alt="YouTube Logo" class="social-icon">
-    </a>
-  </p>
-  <p>&copy; 2024 Shaping Futures. All rights reserved.</p>
-</footer>
-  </body>
+  <footer role="contentinfo">
+    <p>&copy; 2024 Shaping Futures. All rights reserved.</p>
+  </footer>
+</body>
 </html>
-
