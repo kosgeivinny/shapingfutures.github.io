@@ -78,8 +78,8 @@ nav ul li a.active {
 }
 
 .social-media a {
-  margin-left: 1em; /* Space between icons */
-  font-size: 20px; /* Size of icons */
+  margin-left: 1.5em; /* Space between icons */
+  font-size: 19px; /* Size of icons */
   transition: color 0.3s, transform 0.3s; /* Smooth transition */
   border-radius: 50%;
   padding: 10px;
@@ -608,66 +608,87 @@ footer p {
 
 /* Header Styling for the Gallery Section */
 #gallery {
-  text-align: center; /* Center-align text */
-}
-
-#gallery h2 {
-  font-size: 2.5em; /* Large header for the section */
-  color: #f39c12; /* Bright yellow */
-  margin-bottom: 1em; /* Space below the header */
   text-align: center;
 }
 
-/* Grid Layout for Gallery Images */
+#gallery h2 {
+  font-size: 2.5em;
+  color: #f39c12;
+  margin-bottom: 1em;
+}
+
 .gallery-grid {
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
-  gap: 1em; /* Space between grid items */
-  max-width: 1200px; /* Limit the width for better readability */
-  margin: 0 auto; /* Center the grid */
-  padding: 2em; /* Add padding inside the section */
-  background: linear-gradient(135deg, #e0e0e0, #f4f4f4); /* Light gradient background for subtle texture */
-  border-radius: 10px; /* Rounded corners for the section */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+  background: linear-gradient(135deg, #e0e0e0, #f4f4f4);
+  border-radius: 10px;
 }
 
-/* Individual Gallery Item Styling */
 .gallery-item {
-  overflow: hidden; /* Ensure image doesn't overflow */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-  position: relative; /* For positioning overlay if needed */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
-/* Image Styling */
 .gallery-item img {
-  width: 100%; /* Ensure image fits container */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove extra space below image */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Hover Effect for Gallery Items */
 .gallery-item:hover {
-  transform: scale(1.1); /* Slight zoom effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: Minimal Overlay for better text visibility */
 .gallery-item::after {
-  content: ''; /* Empty content for overlay */
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Very light overlay with transparency */
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-item:hover::after {
-  opacity: 0.5; /* Minimal visible overlay on hover */
+  opacity: 0.5;
 }
+
+.pagination {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.pagination button {
+  background: #f39c12;
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  margin: 0 0.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em; /* Ensure buttons are easily clickable */
+}
+
+.pagination button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+/* Optional: Add hover effects for pagination buttons */
+.pagination button:hover:not(:disabled) {
+  background: #e67e22; /* Slightly darker color on hover */
+}
+
 
 .modal, .donation-modal {
   display: none; /* Hidden by default */
