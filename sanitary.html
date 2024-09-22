@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shaping Futures empowers youth through dance and community support.">
   <title>Shaping Futures</title>
   <link rel="stylesheet" href="shafs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="shafs.js" defer></script>
 </head>
-<body class="home-page">
-  <header role="banner">
+<body>
+  <header>
     <div class="logo">
-      <a href="index.html"><img src="images/logo.jpg" alt="Shaping Futures Logo - Empowering Youth Through Dance"></a>
+    <a href="index.html"><img src="images/logo.jpg" alt="Shaping Futures Logo"></a>
     </div>
     <nav role="navigation" aria-label="Main Navigation">
       <ul>
-        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
         <li class="dropdown">
-          <a href="clothes.html"><i class="fas fa-calendar-alt"></i> Programs</a>
+          <a href="sanitary.html" class="active"><i class="fas fa-calendar-alt"></i> Programs</a>
           <div class="dropdown-content">
               <a href="clothes.html">Clothes-Donations</a>
               <a href="dance.html">Dance </a>
@@ -62,18 +61,29 @@
     </div>
   </header>
 
-  <main role="main" class="main-home">
-    <section id="home">
-      <div class="video-background">
-        <video autoplay muted loop id="bg-video">
-          <source src="videos/backv.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="hero-content">
-        <h2>Empowering Youth Through Dance and Community Support</h2>
-      </div>
-    </section>
+  <main>
+  <section id="programs">
+    <h2>Sanitary Towel Donation Program</h2>
+
+    <div class="program">
+        <p>Our Sanitary Towel Donation Program aims to ensure that young girls have access to sanitary products, helping to keep them in school and promoting menstrual health education.</p>
+        
+        <div class="program-content" id="sanitary-towel-content">
+            <img src="images/gal11.jpg" alt="Sanitary Towel Donation 1" class="program-image">
+            <img src="images/gal12.jpg" alt="Sanitary Towel Donation 2" class="program-image">
+            <img src="images/gal13.jpg" alt="Sanitary Towel Donation 3" class="program-image">
+        </div>
+
+        <h3>What We Offer</h3>
+        <ul class="benefits-list">
+            <li>Free sanitary towels to girls in need.</li>
+            <li>Workshops on menstrual health and hygiene.</li>
+            <li>Support for schools to provide these resources regularly.</li>
+            <li>Awareness campaigns to reduce stigma around menstruation.</li>
+        </ul>
+    </div>
+    
+  </section>
   </main>
 
   <footer role="contentinfo">
@@ -84,3 +94,4 @@
   </footer>
 </body>
 </html>
+

@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shaping Futures empowers youth through dance and community support.">
   <title>Shaping Futures</title>
   <link rel="stylesheet" href="shafs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="shafs.js" defer></script>
 </head>
-<body class="home-page">
-  <header role="banner">
+<body>
+  <header>
     <div class="logo">
-      <a href="index.html"><img src="images/logo.jpg" alt="Shaping Futures Logo - Empowering Youth Through Dance"></a>
+    <a href="index.html"><img src="images/logo.jpg" alt="Shaping Futures Logo"></a>
     </div>
     <nav role="navigation" aria-label="Main Navigation">
       <ul>
-        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
         <li class="dropdown">
-          <a href="clothes.html"><i class="fas fa-calendar-alt"></i> Programs</a>
+          <a href="feed.html" class="active"><i class="fas fa-calendar-alt"></i> Programs</a>
           <div class="dropdown-content">
               <a href="clothes.html">Clothes-Donations</a>
               <a href="dance.html">Dance </a>
@@ -62,18 +61,29 @@
     </div>
   </header>
 
-  <main role="main" class="main-home">
-    <section id="home">
-      <div class="video-background">
-        <video autoplay muted loop id="bg-video">
-          <source src="videos/backv.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="hero-content">
-        <h2>Empowering Youth Through Dance and Community Support</h2>
-      </div>
-    </section>
+  <main>
+  <section id="programs">
+    <h2>Feeding Program</h2>
+
+    <div class="program">
+        <p>Our Feeding Program aims to provide nutritious meals to children and families in need. We believe that access to healthy food is essential for growth, development, and overall well-being.</p>
+        
+        <div class="program-content" id="feeding-program-content">
+            <img src="images/gal8.jpg" alt="Feeding Program 1" class="program-image">
+            <img src="images/gal9.jpg" alt="Feeding Program 2" class="program-image">
+            <img src="images/gal10.jpg" alt="Feeding Program 3" class="program-image">
+        </div>
+
+        <h3>What We Provide</h3>
+        <ul class="benefits-list">
+            <li>Daily meals for children in need.</li>
+            <li>Nutritional education for families.</li>
+            <li>Partnerships with local farms for fresh produce.</li>
+            <li>Community events to promote healthy eating.</li>
+        </ul>
+    </div>
+    
+  </section>
   </main>
 
   <footer role="contentinfo">
@@ -84,3 +94,4 @@
   </footer>
 </body>
 </html>
+
