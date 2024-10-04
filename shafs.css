@@ -12,7 +12,7 @@ body {
 /* Hide scrollbar for Internet Explorer and Edge */
 body {
   -ms-overflow-style: none; /* IE and Edge */
-}
+}                                                                                                                                                             
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
@@ -809,55 +809,37 @@ video#bg-video {
 }
 
 
-.modal, .donation-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+#donation {
+  background-color: #f4f4f4; /* Light background for contrast */
+  color: #2d2f55; /* Dark navy blue for text */
+  padding: 3em 1em;
 }
 
-.donation-modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  max-width: 600px; /* Optional: limit max width */
+.donation-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff; /* White background for the container */
+  padding: 2em;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.donation-container h2 {
+  color: #f39c12; /* Yellow for the main heading */
+  font-size: 2.5em;
+  text-align: center;
+}
+.donation-container h3 {
+  color: #f39c12; /* Yellow for the main heading */
+  font-size: 1.5em;
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.donation-container p {
+  font-size: 1.1em;
+  line-height: 1.6;
 }
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.donation-options {
-  display: flex;
-  flex-direction: column;
-}
-
-.donation-option {
-  margin-bottom: 20px;
-}
-
-.donation-modal ul {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0;
-}
-
-.donation-modal ul li {
-  margin-bottom: 10px; /* Space between items */
+.donation-section {
+  margin-top: 20px;
+  border-top: 2px solid #2d2f55;
+  padding-top: 20px;
 }
