@@ -68,10 +68,23 @@
     
     <div class="program">
       <p>Our dance program encourages creativity and physical fitness through various dance styles. We offer classes for all ages and skill levels to foster artistic expression.</p>
-      <div class="program-content" id="dance-program">
-          <img src="images/dance1.png" alt="Dance Program 1" class="program-image">
-          <img src="images/dance2.png" alt="Dance Program 2" class="program-image">
-          <img src="images/dance3.png" alt="Dance Program 3" class="program-image">
+      <div class="dance-content" id="dance-program">
+        <video class="video" autoplay muted loop>
+          <source src="videos/Camro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <video class="video" muted loop>
+          <source src="videos/stabilitychoreo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <video class="video" muted loop>
+          <source src="videos/download.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <video class="video" muted loop>
+        <source src="videos/download (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
       </div>
       <div class="how-to-donate-container">
       <h3>Benefits of Joining</h3>
@@ -115,6 +128,28 @@
       <i class="fab fa-whatsapp"></i> Chat with us
   </a>
   </footer>
+
+  <script>
+    const videos = document.querySelectorAll('.video');
+let currentVideo = videos[0]; // The first video that starts playing
+
+function playVideoOnHover(video) {
+    if (currentVideo !== video) {
+        currentVideo.pause(); // Pause the currently playing video
+        video.play(); // Play the hovered video
+        currentVideo = video; // Update the current video reference
+    }
+}
+
+currentVideo.play(); // Play the first video automatically on page load
+
+videos.forEach(video => {
+    video.addEventListener('mouseenter', () => playVideoOnHover(video));
+    video.addEventListener('mouseleave', () => {
+        // The last hovered video continues playing
+    });
+});
+  </script>
 </body>
 </html>
 

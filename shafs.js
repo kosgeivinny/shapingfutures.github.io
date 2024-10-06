@@ -16,9 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const galleryGrid = document.getElementById('gallery-grid');
         galleryGrid.innerHTML = '';
 
-        const imageIndices = Array.from({ length: totalImages }, (_, index) => index + 1);
-        const shuffledIndices = shuffleArray(imageIndices);
-
+        const shuffledIndices = shuffleArray(Array.from({ length: totalImages }, (_, index) => index + 1));
         const start = (page - 1) * imagesPerPage;
         const end = Math.min(start + imagesPerPage, totalImages);
 
@@ -52,26 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadImages(currentPage); // Load initial page
 
-    // Modal Functionality
-    const donateBtn = document.getElementById('donate-btn'); // Ensure this matches the button that opens the modal
-    const modal = document.getElementById('donation-modal');
     
-    if (donateBtn && modal) {
-        const closeBtn = modal.querySelector('.close');
-
-        donateBtn.addEventListener('click', (event) => {
-            event.preventDefault();
-            modal.style.display = 'block';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    }
 });
