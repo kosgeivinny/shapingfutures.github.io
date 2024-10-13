@@ -69,7 +69,7 @@
     <div class="program">
       <p>Our dance program encourages creativity and physical fitness through various dance styles. We offer classes for all ages and skill levels to foster artistic expression.</p>
       <div class="dance-content" id="dance-program">
-        <video class="video" autoplay muted loop>
+        <video class="video" muted loop>
           <source src="videos/Camro.mp4" type="video/mp4">
           Your browser does not support the video tag.
       </video>
@@ -84,7 +84,25 @@
       <video class="video" muted loop>
         <source src="videos/boys.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
+      </video>
+    </div>
+    <div class="dance-content">
+      <video class="video" muted loop>
+      <source src="videos/Branded.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+      <video class="video" muted loop>
+        <source src="videos/Amapiano.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <video class="video" muted loop>
+          <source src="videos/Majuu 1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+          <video class="video" muted loop>
+            <source src="videos/Triple3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
       </div>
       <div class="how-to-donate-container">
       <h3>Benefits of Joining</h3>
@@ -130,25 +148,63 @@
   </footer>
 
   <script>
-    const videos = document.querySelectorAll('.video');
+      const videos = document.querySelectorAll('.video');
 let currentVideo = videos[0]; // The first video that starts playing
+
+// Function to hide controls for all videos
+function hideControls() {
+    videos.forEach(video => {
+        video.classList.remove('show-controls'); // Ensure controls are hidden
+        video.removeAttribute('controls'); // Remove controls attribute
+    });
+}
 
 function playVideoOnHover(video) {
     if (currentVideo !== video) {
         currentVideo.pause(); // Pause the currently playing video
+        currentVideo.classList.remove('show-controls'); // Hide controls for the old video
+        currentVideo.removeAttribute('controls'); // Remove controls attribute
+
         video.play(); // Play the hovered video
+        video.classList.add('show-controls'); // Show controls for the new video
+        video.setAttribute('controls', ''); // Add controls attribute
+
         currentVideo = video; // Update the current video reference
     }
 }
 
+// Hide controls for all videos on page load
+hideControls();
 currentVideo.play(); // Play the first video automatically on page load
+currentVideo.classList.add('show-controls'); // Show controls for the first video
+currentVideo.setAttribute('controls', ''); // Add controls to the first video
 
 videos.forEach(video => {
     video.addEventListener('mouseenter', () => playVideoOnHover(video));
+
     video.addEventListener('mouseleave', () => {
-        // The last hovered video continues playing
+        // Uncomment to hide controls when mouse leaves
+        // video.classList.remove('show-controls');
+    });
+
+    video.addEventListener('play', () => {
+        video.classList.add('show-controls'); // Show controls when playing
+        video.setAttribute('controls', ''); // Add controls attribute
+    });
+
+    video.addEventListener('pause', () => {
+        video.classList.remove('show-controls'); // Hide controls when paused
+        video.removeAttribute('controls'); // Remove controls attribute
+    });
+
+    video.addEventListener('ended', () => {
+        video.classList.remove('show-controls'); // Hide controls when ended
+        video.removeAttribute('controls'); // Remove controls attribute
     });
 });
+
+
+
   </script>
 </body>
 </html>

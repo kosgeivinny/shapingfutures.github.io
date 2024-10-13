@@ -560,6 +560,13 @@ video#bg-video {
     border-radius: 5px;
     cursor: pointer;
 }
+.video::-webkit-media-controls {
+  display: none !important; /* Hide default controls */
+}
+
+.video.show-controls::-webkit-media-controls {
+  display: block !important; /* Show controls when the class is added */
+}
 
 
 .how-to-donate-container {
@@ -693,6 +700,7 @@ video#bg-video {
   background-color: #f4f4f4; /* Light background for contrast */
   color: #2d2f55; /* Dark navy blue for text */
   padding: 3em 1em;
+  
 }
 
 #contact h2 {
@@ -703,15 +711,43 @@ video#bg-video {
 }
 
 .contact-container {
-  max-width: 800px;
   margin: 0 auto;
   background: #fff; /* White background for the form container */
   padding: 2em;
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  align-items: center;
+}
+.contact-details {
+  width: 50%;
+}
+.contact-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+.contact-icon {
+  height: 70px;
+  width: 70px;
+  background-color: #e67e22;
+  text-align: center;
+  border-radius: 50%;
+}
+.contact-icon i {
+  font-size: 30px;
+  line-height: 70px;
+}
+.desc {
+  margin-left: 30px;
+}
+.desc h3 {
+  line-height: 0px;
 }
 
 .contact-form {
+  width: 45%;
   display: flex;
   flex-direction: column;
   gap: 1.5em; /* Space between form elements */
