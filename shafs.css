@@ -482,6 +482,7 @@ video#bg-video {
   align-items: center;
 }
 
+
 .team-member img {
   width: 100%;
   border-radius: 50%; /* Makes the photos circular */
@@ -492,6 +493,15 @@ video#bg-video {
   cursor: pointer;
 }
 
+.team-member h3 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.team-member p {
+  margin-top: 0;
+  padding-top: 0;
+  font-style: italic;
+}
 
 /* Programs Page Styles */
 #programs {
@@ -560,14 +570,6 @@ video#bg-video {
     border-radius: 5px;
     cursor: pointer;
 }
-.video::-webkit-media-controls {
-  display: none !important; /* Hide default controls */
-}
-
-.video.show-controls::-webkit-media-controls {
-  display: block !important; /* Show controls when the class is added */
-}
-
 
 .how-to-donate-container {
   text-align: left; /* Center the text */
@@ -720,6 +722,7 @@ video#bg-video {
   justify-content: space-evenly;
   max-width: 1200px;
   align-items: center;
+  height: 80vh;
 }
 .contact-details {
   width: 50%;
