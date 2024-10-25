@@ -541,7 +541,7 @@ video#bg-video {
 
 .program-content {
   display: flex; /* Hide content by default */
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 15px 0 20px 0;
 }
 
