@@ -696,7 +696,19 @@ video#bg-video {
     font-size: 0.9em;
   }
 }
-
+.sponsor-img {
+  display: flex;
+  justify-content: space-around;
+}
+.sponsor-img img {
+  width: 100%;
+  border-radius: 50%; /* Makes the photos circular */
+  height: 200px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: fill;
+  cursor: pointer;
+}
 /* Contact Us Page Styles */
 #contact {
   background-color: #f4f4f4; /* Light background for contrast */
