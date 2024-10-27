@@ -701,13 +701,13 @@ video#bg-video {
   justify-content: space-around;
 }
 .sponsor-img img {
-  width: 100%;
   border-radius: 50%; /* Makes the photos circular */
   height: 200px;
   width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   object-fit: fill;
   cursor: pointer;
+  margin: 0 15px;
 }
 /* Contact Us Page Styles */
 #contact {
