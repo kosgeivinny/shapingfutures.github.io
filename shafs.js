@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Gallery Functionality
-    const imagesPerPage = 10;
+    const imagesPerPage = 20;
     let currentPage = 1;
-    const totalImages = 108;
+    const totalImages = 133;
 
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
